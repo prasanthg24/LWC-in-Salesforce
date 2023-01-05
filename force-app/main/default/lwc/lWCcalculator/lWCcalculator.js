@@ -4,9 +4,25 @@ import { LightningElement } from 'lwc';
         Input1;
         Input2;
         result;
-    handleClick()
+    handleClick(event)
         {
+            const calculator = event.target.name;
+            if(calculator == 'Add')
+            {
             this.result = parseInt(this.Input1)+parseInt(this.Input2);
+            }
+            else if(calculator == 'Subtract')
+            {
+             this.result = parseInt(this.Input1)-parseInt(this.Input2);
+            }
+           else if(calculator == 'Multiple')
+            {
+             this.result = parseInt(this.Input1)*parseInt(this.Input2);
+            }
+            else if(calculator == 'Division')
+            {
+             this.result = parseInt(this.Input1)/parseInt(this.Input2);
+            }
          
         }
 

@@ -1,0 +1,18 @@
+<template>
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:social">
+    
+<div class="slds-p-around_medium">
+<lightning-input type="checkbox" variant="standard" name="name" label="Make Visible" onclick={handleChange}></lightning-input>
+<template if:true={areaDetailVisible}>
+Content are visible now! {areaDetailVisible}
+</template>
+
+<template if:false={areaDetailVisible}>
+Content are visible in  {areaDetailVisible} 
+</template>
+</div>
+
+
+
+</lightning-card>
+</template>

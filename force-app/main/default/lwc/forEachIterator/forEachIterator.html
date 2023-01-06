@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  variant="Narrow"  title="For Each" icon-name="custom:custom14">
+    <div class="slds-p-around_medium">
+    <template for:each={contacts} for:item="con">
+        <li key ={con.Id}>
+            {con.Name},{con.Title}
+        </li>
+    </template>
+    </div>
+    </lightning-card>
+    
+    <lightning-card  variant="Narrow"  title="Iterator" icon-name="custom:custom15">
+    <div class="slds-p-around_medium">
+    <template iterator:con={contacts}>
+      <li key ={con.value.Id}>
+          {con.value.Name}-{con.value.Title}
+      </li>
+    </template>
+    </div>
+    </lightning-card>
+
+</template>

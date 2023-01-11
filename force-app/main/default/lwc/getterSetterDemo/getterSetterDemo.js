@@ -8,7 +8,7 @@ export default class GetterSetterDemo extends LightningElement {
     }
     get itemName()
     {
-        alert('Called get')
+       // alert('Called get')
         return this.upperCaseItem;
     }
 

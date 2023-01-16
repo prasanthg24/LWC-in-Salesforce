@@ -24,5 +24,7 @@ export default class QuickContactCreate extends LightningElement
         fields.AccountId = this.recordId;
         this.template.querySelector('lightning-record-form').submit(fields);
         eval("$A.get('e.force:refreshView').fire();");
+        
+       
     }
 }

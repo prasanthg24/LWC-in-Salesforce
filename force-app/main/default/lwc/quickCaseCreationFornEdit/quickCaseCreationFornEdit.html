@@ -1,3 +1,37 @@
 <template>
     
+    <lightning-card   title="Quick Case Creation with edit form" icon-name="standard:account">
+        
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name="Case" onsuccess={handleSuccess}>
+                <lightning-messages>
+                </lightning-messages>
+
+                <lightning-input-field field-name="Origin" value="Email">
+                </lightning-input-field>
+                <lightning-input-field field-name="Priority" value="High">
+                </lightning-input-field>
+                <lightning-input-field field-name="Subject" value="Test Subject">
+                </lightning-input-field>
+                <lightning-input-field field-name="Status" value="Open">
+                </lightning-input-field>
+                <lightning-input-field field-name="ContactId" data-contactrecid ="Contactid" value={recordId}>
+                </lightning-input-field>
+          <div class="slds-m-around-medium">
+                <lightning-button class="slds-m-top_small" label="Cancel" onclick={handleReset}>
+                </lightning-button>
+               &nbsp;
+                <lightning-button
+                class="slds-m-top_small"
+                variant="brand"
+                type="submit"
+                label="Save">
+                </lightning-button>
+          </div>
+                
+            </lightning-record-edit-form>
+        </div>
+
+
+    </lightning-card>
 </template>

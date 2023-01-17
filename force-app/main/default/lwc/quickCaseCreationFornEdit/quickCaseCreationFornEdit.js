@@ -13,18 +13,22 @@ export default class QuickCaseCreationFornEdit extends LightningElement
         });
         this.dispatchEvent(evt);
         eval("$A.get('e.force:refreshView').fire();");
+       
     }
 
     handleReset(event)
     {
         const inputFields = this.template.querySelectorAll('lightning-input-field');
-        if(inputfields)
+        if(inputFields)
         {
-            inputfields.forEach(field => {
-                if(field.getAttribute('data-name')!='contactid')
-                {
-                    field.reset();
-                }
+            inputFields.forEach(field => {
+                
+                    if(!field.getAttribute('data-contactrecid'))
+                    {
+                        field.reset();
+                    }
+                   
+                
             });
         }
     }

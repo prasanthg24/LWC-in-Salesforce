@@ -1,6 +1,6 @@
 import { LightningElement } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import {NavigationMixin} from 'lightning/navigation';
+import { NavigationMixin } from 'lightning/navigation';
 export default class LightningRecordwithFormLayout extends NavigationMixin(LightningElement)
 {
 
@@ -13,16 +13,16 @@ export default class LightningRecordwithFormLayout extends NavigationMixin(Light
         });
         this.dispatchEvent(evt);
 
-        this[NavigationMixin.Navigate]({
+        this[NavigationMixin.Navigate]
+        ({
    
              type: 'standard__recordPage',
-            attributes:{
+             attributes:{
                 recordId : event.detail.id,
                 objectApiName:'Account',
                 actionName : 'view'
             },
-       
-    });
+         });
     }
 
 }

@@ -1,7 +1,7 @@
 import { LightningElement,api } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import FName_field from '@salesforce/schema/Contact.FirstName';
-import  LName_field from '@salesforce/schema/Contact.LastName';
+import LName_field from '@salesforce/schema/Contact.LastName';
 import Email from '@salesforce/schema/Contact.Email';
 import Phone_field  from '@salesforce/schema/Contact.Phone';
 export default class QuickContactCreate extends LightningElement 
@@ -24,7 +24,6 @@ export default class QuickContactCreate extends LightningElement
         fields.AccountId = this.recordId;
         this.template.querySelector('lightning-record-form').submit(fields);
         eval("$A.get('e.force:refreshView').fire();");
-        
        
     }
 }

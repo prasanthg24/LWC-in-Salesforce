@@ -1,15 +1,22 @@
 <template>
-<lightning-card title="Quick Contact Creatoip">
-    
+<lightning-card title="Edit Quick Contact ">
     <div class="slds-m-around_medium">
-        <lightning-record-form
+        <lightning-record-form  record-id={recordId}
+            object-api-name ="Contact"
+            fields={contactFields}
+            columns="2"
+            onsuccess={handleSuccess}> 
+        </lightning-record-form>
+    </div>
+</lightning-card>
+</template>
+
+
+<!--  <lightning-record-form
             object-api-name ="Contact"
             fields={contactFields}
             columns="2"
             onsuccess={handleSuccess}
+            mode ="view"
             onsubmit={handleSubmit}>
-        </lightning-record-form>
-    </div>
-
-</lightning-card>
-</template>
+        </lightning-record-form>-->

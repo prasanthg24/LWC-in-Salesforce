@@ -20,6 +20,7 @@ export default class WeatherApp extends LightningElement
     {
       event.preventDefault();
       this.fetchData();
+      this.loadingClasses()
     }
 
       fetchData ()

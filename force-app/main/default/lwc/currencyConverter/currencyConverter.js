@@ -6,7 +6,7 @@ export default class CurrencyConverter extends LightningElement {
     countryList =countryCodeList
     currencyImage = currencyConverterAssets+'/currencyConverterAssets/currency.svg'
 
-    countryFrom = "USD"
+  countryFrom = "USD"
   countryTo = "AUD"
   amount =''
   result

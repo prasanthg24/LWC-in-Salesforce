@@ -24,6 +24,7 @@ public with sharing class weatherAppController {
    public static String getKey(){
     String key = '95a829aa49a520ba92a7146cee5282b3'; //95a829aa49a520ba92a7146cee5282b3 System.Label.WeatherApiKey
     String output = '&appid=' + key;
+    system.debug('Output = appid --> '+output);
     return output;
    }
 }
